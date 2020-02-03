@@ -261,6 +261,8 @@ class JointStatePublisher(rclpy.node.Node):
         source_list = self.get_param('source_list')
         self.sources = []
         for source in source_list:
+            if source == "foo" or source == '':
+                continue
             self.sources.append(self.create_subscription(sensor_msgs.msg.JointState, source, self.source_cb, 10))
 
         # The source_update_cb will be called at the end of self.source_cb.

@@ -1,17 +1,19 @@
 from setuptools import find_packages
 from setuptools import setup
+from moya_build.common_setuptools import gen_data_files_list
+from os.path import dirname, abspath
 
 package_name = 'joint_state_publisher'
+pkg_dir = pkg_dir = str(dirname(abspath(__file__)))
+dirs_to_add_recursive = ['meshes', 'launch', 'param','urdf', 'rviz']
+dirs_ignore = ['__pycache__']
+ext_ignore = ['.pyc']
 
 setup(
     name=package_name,
     version='2.0.0',
     packages=find_packages(exclude=['test']),
-    data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
-    ],
+    data_files=gen_data_files_list(package_name, pkg_dir, dirs_to_add_recursive, dirs_ignore, ext_ignore),
     install_requires=['setuptools'],
     zip_safe=True,
     author='David V. Lu!!',
