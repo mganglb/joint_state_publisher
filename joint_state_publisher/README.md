@@ -1,5 +1,15 @@
 # Joint State Publisher
 
+How to use:
+
+ros2 launch joint_state_publisher jsp_upload.launch.py
+
+
+Known Problems: Broken
+jsp_upload.test.launch.py
+jsp_upload_minimal.test.lauch.py
+
+
 This contains a package for publishing `sensor_msgs/msg/JointState` messages for a robot described with URDF.
 Given a URDF (either passed on the command-line or via the `/robot_description` topic), this node
 will continually publish values for all of the movable joints in the URDF to the `/joint_states` topic.
