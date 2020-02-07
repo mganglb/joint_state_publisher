@@ -12,6 +12,8 @@ from joint_state_publisher.common_roslaunch import create_params_jsp, get_prefix
 from moya.common_roslaunch import create_common_params_node_adv, create_common_params_group
 from moya.common_roslaunch import add_action_list_to_launch_description, get_common_dirs
 
+
+
 def generate_launch_description():
     ld = LaunchDescription()
 
@@ -66,8 +68,7 @@ def generate_launch_description():
                         p_use_smallest_joint_limits = p_use_smallest_joint_limits_jsp, 
                         p_source_list = p_source_list_jsp, 
                         p_delta = p_delta_jsp, p_zeros = p_zeros_jsp, 
-                        p_dependent_joints = p_dependent_joints_jsp,
-                        prefix = prefix_jsp)
+                        p_dependent_joints = p_dependent_joints_jsp)
     add_action_list_to_launch_description(ld, action_list_jsp)
 
     # jsp Node
@@ -83,3 +84,7 @@ def generate_launch_description():
     ld.add_action(jsp_group)
 
     return ld
+
+
+if __name__ == "__main__":
+    generate_launch_description()

@@ -15,7 +15,7 @@ def generate_launch_description():
 
     # common defaults jsp
     p_use_node_jsp = 'True'                     
-    p_namespace_jsp = ""
+    p_namespace_jsp = ''
     p_use_namespace_jsp = 'False'
     p_use_sim_time_jsp = 'False'
     p_nodename_jsp = 'joint_state_publisher'
