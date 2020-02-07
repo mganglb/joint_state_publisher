@@ -1,3 +1,9 @@
+'''
+@file
+@license: Todo
+@author markus.ganglbauer@profactor.at
+'''
+
 import os
 
 from launch import LaunchDescription

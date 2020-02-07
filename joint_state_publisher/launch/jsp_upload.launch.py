@@ -1,3 +1,9 @@
+'''
+@file
+@license: Todo
+@author markus.ganglbauer@profactor.at
+'''
+
 
 from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory # from launch_ros.substitutions import FindPackageShare
