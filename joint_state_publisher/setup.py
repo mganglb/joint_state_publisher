@@ -11,16 +11,16 @@ ext_ignore = ['.pyc']
 
 setup(
     name=package_name,
-    version='2.0.0',
+    version='2.1.0',
     packages=find_packages(exclude=['test']),
     data_files=gen_data_files_list(package_name, pkg_dir, dirs_to_add_recursive, dirs_ignore, ext_ignore),
     install_requires=['setuptools'],
     zip_safe=True,
     author='David V. Lu!!',
     author_email='davidvlu@gmail.com',
-    maintainer='Chris Lalancette',
-    maintainer_email='clalancette@openrobotics.org',
-    keywords=['ROS'],
+    maintainer='Markus Ganglbauer',
+    maintainer_email='markus.ganglbauer@profactor.at',
+    keywords=['ROS2'],
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD',
